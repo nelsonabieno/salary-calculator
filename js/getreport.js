@@ -1,11 +1,11 @@
 /**
  * Calculate Salary
  */
-var lib = require
+var lib = require("js/database.js");
 
 var db = new lib.EmployeeStore();
 
-db.getEmployeesByType(lib.EmployeeTypes.INTERN)
+db.getEmployeesByType(lib.EmployeeTypes.INTERN);
 function calcSalary(noOfYears, typeOfPos) {
     var salary;
     switch (typeOfPos) {
@@ -32,6 +32,6 @@ function calcSalary(noOfYears, typeOfPos) {
 }
 
 function viewAllReport() {
-    var
-            return;
+  
+   
 }
