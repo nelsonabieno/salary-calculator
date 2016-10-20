@@ -1,0 +1,24 @@
+{
+  "name": "salary-calculator",
+  "version": "1.0.0",
+  "description": "Takes in user level and experience and returns a report of the user salary.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oreoluwade/salary-calculator.git"
+  },
+  "keywords": [
+    "salary",
+    "calculator",
+    "employee"
+  ],
+  "author": "group2classxvi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oreoluwade/salary-calculator/issues"
+  },
+  "homepage": "https://github.com/oreoluwade/salary-calculator#readme"
+}
