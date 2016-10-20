@@ -1,28 +1,23 @@
-/**
- * An authentication class
- */
-
-function Authenticate (username,password){
-    this.username=username;
-    this.password=password;
- }
 
 /**
- * A function validateUser
+ * A function validateuser
  * @param: username,password
  */
-Authenticate.prototype.validateUser= function(user,pass){
+function validateuser(){
 
-   if (typeof user ==="string" && typeof pass ==="string"){
+     var user=document.getElementById('Username');
+     var pass=document.getElementById('Password');
 
-       if (user===this.username && pass===this.password){
-           return true;
+       if (typeof user ==="string" && typeof pass ==="string"){
+
+           if (user===this.username && pass===this.password){
+               window.open('report.html');
+           }
+           else{
+               alert('Username and Password doesnot exist!');
+           }
        }
-       else{
-           return false;
+        else{
+           alert('Only valid Input are expected!');
        }
-   }
-    else{
-       return false;
-   }
 }
