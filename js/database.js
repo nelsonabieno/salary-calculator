@@ -58,12 +58,12 @@ Employee.prototype.getUnitSalary = function (){
  **/
 function EmployeeStore (){
     this.store = [
-        new Employee(EmployeeTypes.INTERN, 'female', 'Cynthia', 'Morgan'),
-        new Employee(EmployeeTypes.ASSOCIATE, 'male', 'Jack', 'Sparrow'),
-        new Employee(EmployeeTypes.DIRECTOR, 'female', 'Maryam', 'Coleman'),
-        new Employee(EmployeeTypes.EXECUTIVE, 'male', 'Philip', 'Freeman'),
-        new Employee(EmployeeTypes.INTERN, 'male', 'Arthur', 'Manager'),
-        new Employee(EmployeeTypes.INTERN, 'male', 'John', 'Black'),
+        new Employee(EmployeeTypes.INTERN, 'female', 'Cynthia', 'Morgan', 1),
+        new Employee(EmployeeTypes.ASSOCIATE, 'male', 'Jack', 'Sparrow', 3),
+        new Employee(EmployeeTypes.DIRECTOR, 'female', 'Maryam', 'Coleman', 2),
+        new Employee(EmployeeTypes.EXECUTIVE, 'male', 'Philip', 'Freeman', 5),
+        new Employee(EmployeeTypes.INTERN, 'male', 'Arthur', 'Manager', 9),
+        new Employee(EmployeeTypes.INTERN, 'male', 'John', 'Black', 7),
     ];
 }
 
@@ -84,9 +84,3 @@ EmployeeStore.prototype.add = function(employee) {
 EmployeeStore.prototype.findEmployeesByType =  function (empType) {
     return this.store.filter(function (emp){emp.type===empType});
 }
-
-module.exports = {
-    Employee: Employee,
-    EmployeeTypes: EmployeeTypes,
-    UnitSalary: UnitSalary
-};

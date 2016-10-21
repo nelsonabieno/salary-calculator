@@ -1,37 +1,32 @@
 /**
  * Calculate Salary
  */
-var lib = require("js/database.js");
-
-var db = new lib.EmployeeStore();
-
-db.getEmployeesByType(lib.EmployeeTypes.INTERN);
 function calcSalary(noOfYears, typeOfPos) {
-    var salary;
-    switch (typeOfPos) {
-        case "INTERN":
-            salary = lib.UnitSalary.INTERN;
-            break;
-        case "ASSOCIATE":
-            salary = lib.UnitSalary.ASSOCIATE;
-            break;
-                    case "MANAGER":
-            salary = lib.UnitSalary.MANAGER;
-            break;
-                    case "EXEUTIVES":
-            salary = lib.UnitSalary.EXECUTIVES;
-            break;
-            
-                    case "DIRECTORS":
-            salary = lib.UnitSalary.DIRECTORS;
-            break;
+  var salary;
+  switch (typeOfPos) {
+    case EmployeeTypes.INTERN:
+      salary = UnitSalary.INTERN;
+      break;
+    case EmployeeTypes.ASSOCIATE:
+      salary = UnitSalary.ASSOCIATE;
+      break;
+    case EmployeeTypes.MANAGER:
+      salary = UnitSalary.MANAGER;
+      break;
+    case EmployeeTypes.EXEUTIVES:
+      salary = UnitSalary.EXECUTIVES;
+      break;
+    case EmployeeTypes.DIRECTORS:
+      salary = UnitSalary.DIRECTORS;
+      break;
+    default:
+      alert('Invalid employee type!');
+      break;
+  }
 
-
-    }
-    return noOfYears * salary;
+  return noOfYears * salary;
 }
 
-function viewAllReport() {
-  
-   
+function getEmployees() {
+  return (new EmployeeStore()).store;
 }
