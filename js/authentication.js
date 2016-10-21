@@ -10,11 +10,11 @@ function validateuser(){
 
        if (typeof user ==="string" && typeof pass ==="string"){
 
-           if (user===this.username && pass===this.password){
+           if (user==='admin' && pass==='admin'){
                window.open('report.html');
            }
            else{
-               alert('Username and Password doesnot exist!');
+               alert('Username and Password does not exist!');
            }
        }
         else{
