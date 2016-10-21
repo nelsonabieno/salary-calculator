@@ -4,19 +4,19 @@
 function calcSalary(noOfYears, typeOfPos) {
   var salary;
   switch (typeOfPos) {
-    case EmployeeTypes.INTERN:
+    case "1":
       salary = UnitSalary.INTERN;
       break;
-    case EmployeeTypes.ASSOCIATE:
+    case "2":
       salary = UnitSalary.ASSOCIATE;
       break;
-    case EmployeeTypes.MANAGER:
+    case "3":
       salary = UnitSalary.MANAGER;
       break;
-    case EmployeeTypes.EXEUTIVES:
+    case "4":
       salary = UnitSalary.EXECUTIVES;
       break;
-    case EmployeeTypes.DIRECTORS:
+    case "5":
       salary = UnitSalary.DIRECTORS;
       break;
     default:
@@ -35,7 +35,7 @@ function handleSalaryBtn () {
   var level = document.getElementById('level').value;
   var years = document.getElementById('years').value;
 
-  if (level && salary) {
+  if (level && years) {
     var salary = calcSalary(years, level);
     alert('Salary: ' + salary);
   } else {
