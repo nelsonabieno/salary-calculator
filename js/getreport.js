@@ -14,10 +14,10 @@ function calcSalary(noOfYears, typeOfPos) {
       salary = UnitSalary.MANAGER;
       break;
     case "4":
-      salary = UnitSalary.EXECUTIVES;
+      salary = UnitSalary.EXECUTIVE;
       break;
     case "5":
-      salary = UnitSalary.DIRECTORS;
+      salary = UnitSalary.DIRECTOR;
       break;
     default:
       alert('Invalid employee type!');
