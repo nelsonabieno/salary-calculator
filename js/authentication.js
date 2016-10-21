@@ -5,10 +5,9 @@
  */
 function validateuser(){
 
-     var user=document.getElementById('Username');
-     var pass=document.getElementById('Password');
-
-           if (user==='admin' && pass==='admin'){
+     var user=document.getElementById('Username').value;
+     var pass=document.getElementById('Password').value;
+           if (user=='admin' && pass=='admin'){
                window.open('report.html');
            }
            else{
