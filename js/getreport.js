@@ -52,6 +52,7 @@ function handleReportBtn (){
   html += '<thead><tr><td>S/N</td><td>First Name</td><td>Surname</td>';
   html += '<td>Level</td><td>Years</td><td>Salary</td></tr></thead><tbody>';
 
+
   employees.forEach(function(emp, idx){
   html += count % 2 === 0 ? '<tr class="info">' : '<tr>';
 
@@ -62,7 +63,7 @@ function handleReportBtn (){
   html += '<td>' + emp.lastName + '</td>';
   html += '<td>' + emp.type + '</td>';
   html += '<td>' + emp.years + '</td>';
-  html += '<td>' + calcSalary(emp.years, emp.type) + '</td></tr>';
+  html += '<td>' + calcSalary(emp.years, String (emp.type)) + '</td></tr>';
   });
   
   html += '</tbody></table>';
