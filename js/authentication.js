@@ -4,20 +4,17 @@
  * @param: username,password
  */
 function validateuser(){
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
 
-     var user=document.getElementById('Username');
-     var pass=document.getElementById('Password');
+  if (username=='jack' && password=='sparrow'){
+      alert('Welcome, you have successfully logged in.')
+      var loginDiv = document.getElementById('login');
+      var calcDiv = document.getElementById('calc');
 
-       if (typeof user ==="string" && typeof pass ==="string"){
-
-           if (user===this.username && pass===this.password){
-               window.open('report.html');
-           }
-           else{
-               alert('Username and Password doesnot exist!');
-           }
-       }
-        else{
-           alert('Only valid Input are expected!');
-       }
+      loginDiv.remove();
+      calcDiv.style.display = 'block';
+  } else {
+    alert('Invalid username/password!');
+  }
 }
