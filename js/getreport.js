@@ -61,7 +61,7 @@ function handleReportBtn (){
   html += '<td>' + count + '</td>';
   html += '<td>' + emp.firstName + '</td>';
   html += '<td>' + emp.lastName + '</td>';
-  html += '<td>' + emp.type + '</td>';
+  html += '<td>' + emp.getLevel() + '</td>';
   html += '<td>' + emp.years + '</td>';
   html += '<td>' + calcSalary(emp.years, String (emp.type)) + '</td></tr>';
   });

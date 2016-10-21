@@ -1,11 +1,11 @@
 'use strict';
 
-var EmployeeTypes = {
-    INTERN: 1,
-    ASSOCIATE: 2,
-    MANAGER: 3,
-    EXECUTIVE: 4,
-    DIRECTOR: 5
+var EmployeeType = {
+    INTERN: "1",
+    ASSOCIATE: "2",
+    MANAGER: "3",
+    EXECUTIVE: "4",
+    DIRECTOR: "5"
 };
 
 var UnitSalary = {
@@ -32,19 +32,57 @@ Employee.prototype.getUnitSalary = function (){
     var baseSalary;
 
     switch (this.type) {
-    case EmployeeTypes.INTERN:
+    case EmployeeType.INTERN:
         baseSalary = 5000;
         break;
-    case EmployeeTypes.ASSOCIATE:
+    case EmployeeType.ASSOCIATE:
         baseSalary = 10000;
         break;
-    case EmployeeTypes.MANAGER:
+    case EmployeeType.MANAGER:
         baseSalary = 15000;
         break;
-    case EmployeeTypes.EXECUTIVE:
+    case EmployeeType.EXECUTIVE:
         baseSalary = 20000;
         break;
-    case EmployeeTypes.DIRECTOR:
+    case EmployeeType.DIRECTOR:
+        baseSalary = 25000;
+        break;
+    default:
+        throw new Error('Invalid Employee Type');
+    }
+
+    return baseSalary;
+}
+
+Employee.prototype.getLevel = function (){
+    var levels = {
+        '1': 'Intern',
+        '2': 'Associate',
+        '3': 'Manager',
+        '4': 'Executive',
+        '5': 'Director'
+    };
+
+    return levels[this.type];
+}
+
+Employee.prototype.getUnitSalary = function (){
+    var baseSalary;
+
+    switch (this.type) {
+    case EmployeeType.INTERN:
+        baseSalary = 5000;
+        break;
+    case EmployeeType.ASSOCIATE:
+        baseSalary = 10000;
+        break;
+    case EmployeeType.MANAGER:
+        baseSalary = 15000;
+        break;
+    case EmployeeType.EXECUTIVE:
+        baseSalary = 20000;
+        break;
+    case EmployeeType.DIRECTOR:
         baseSalary = 25000;
         break;
     default:
@@ -59,12 +97,12 @@ Employee.prototype.getUnitSalary = function (){
  **/
 function EmployeeStore (){
     this.store = [
-        new Employee(EmployeeTypes.INTERN, 'female', 'Cynthia', 'Morgan', 1),
-        new Employee(EmployeeTypes.ASSOCIATE, 'male', 'Jack', 'Sparrow', 3),
-        new Employee(EmployeeTypes.DIRECTOR, 'female', 'Maryam', 'Coleman', 2),
-        new Employee(EmployeeTypes.EXECUTIVE, 'male', 'Philip', 'Freeman', 5),
-        new Employee(EmployeeTypes.INTERN, 'male', 'Arthur', 'Manager', 9),
-        new Employee(EmployeeTypes.INTERN, 'male', 'John', 'Black', 7),
+        new Employee(EmployeeType.INTERN, 'female', 'Cynthia', 'Morgan', 1),
+        new Employee(EmployeeType.ASSOCIATE, 'male', 'Jack', 'Sparrow', 3),
+        new Employee(EmployeeType.DIRECTOR, 'female', 'Maryam', 'Coleman', 2),
+        new Employee(EmployeeType.EXECUTIVE, 'male', 'Philip', 'Freeman', 5),
+        new Employee(EmployeeType.INTERN, 'male', 'Arthur', 'Manager', 9),
+        new Employee(EmployeeType.INTERN, 'male', 'John', 'Black', 7),
     ];
 }
 
