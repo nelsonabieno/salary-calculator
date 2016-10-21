@@ -41,6 +41,35 @@
                     </div>
 
                   </div>
+
+                  <div id="calc" style="display: none;">
+                    <div class="form-group">
+                      <label>Level</label>
+                      <select name="level" id="level" class="form-control">
+                        <option value="">Choose an option</option>
+                        <option value="1">Intern</option>
+                        <option value="2">Associate</option>
+                        <option value="3">Manager</option>
+                        <option value="4">Executive</option>
+                        <option value="5">Director</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Years of Experience</label>
+                      <input type="text" id='years' name="years"
+                        class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                      <button onclick="handleSalaryBtn()" id="salary"
+                        class="btn btn-info" type="button">Calculate</button>
+                      <button onclick="handleReportBtn()" id="report
+                        class="btn btn-danger" type="button">View Report</button>
+                    </div>
+                  </div>
+
+                  <div id="reportDiv"></div>
               </div> 
             </div>
             

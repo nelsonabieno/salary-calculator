@@ -22,6 +22,7 @@ var UnitSalary = {
 function Employee (empType, sex, firstName, lastName, yearsExp){
     this.type = empType;
     this.sex = sex;
+    this.firstName = firstName;
     this.lastName = lastName;
     this.years = yearsExp;
 }
